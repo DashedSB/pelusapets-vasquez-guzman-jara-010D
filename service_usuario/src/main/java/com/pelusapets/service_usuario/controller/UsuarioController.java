@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import com.pelusapets.service_usuario.model.Usuario;
 import com.pelusapets.service_usuario.services.UsuarioService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
@@ -29,9 +31,9 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Usuario> registrar(@RequestBody Usuario usuario) {
-        return new ResponseEntity<>(usuarioService.guardar(usuario), HttpStatus.CREATED);
-    }
+public ResponseEntity<Usuario> registrar(@Valid @RequestBody Usuario usuario) {
+    return new ResponseEntity<>(usuarioService.guardar(usuario), HttpStatus.CREATED);
+}
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {

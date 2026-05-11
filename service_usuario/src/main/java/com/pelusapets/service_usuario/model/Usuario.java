@@ -22,7 +22,7 @@ public class Usuario {
     @NotBlank(message = "El nombre de usuario no puede estar vacío")
     @Size(min = 4, max = 20, message = "El nombre debe tener entre 4 y 20 caracteres")
     @Column(nullable = false, unique = true)
-    private String nombreUsusario;
+    private String nombreUsuario;
 
     @NotBlank(message = "El email es obligatorio")
     @Email(message = "Debe ingresar un formato de email válido")
