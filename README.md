@@ -2,7 +2,7 @@
 
 Este proyecto implementa el backend completo de un e-commerce para mascotas (PelusaPets) utilizando una arquitectura basada en microservicios con **Spring Boot**. El sistema está diseñado con alta cohesión y bajo acoplamiento, garantizando que procesos críticos como la facturación, el inventario, la logística y los pagos operen de forma independiente y escalable.
 
-Desarrollado como proyecto de nivel empresarial para la carrera de **Analista Programador**, aplicando principios KISS, SOLID, versionamiento de APIs y persistencia inteligente.
+Desarrollado como proyecto de nivel empresarial para la carrera de **Analista Programador**, aplicando versionamiento de APIs y persistencia inteligente.
 
 ---
 
