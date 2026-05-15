@@ -5,6 +5,11 @@ Este proyecto implementa el backend completo de un e-commerce para mascotas (Pel
 Desarrollado como proyecto de nivel empresarial para la carrera de **Analista Programador**, aplicando versionamiento de APIs y persistencia inteligente.
 
 ---
+## Nombre de integrantes:
+** Esteban Vasquez Gutierrez
+** Bryan Guzman Puebla
+** Juan Jara Gutierrez
+---
 
 ## 🛠️ Tecnologías y Herramientas
 
