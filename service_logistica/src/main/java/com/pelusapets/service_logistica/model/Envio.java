@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 @Table(name = "envios")
 @Data
 public class Envio {
+    @Transient
+    private Object datosUsuario;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,15 +19,15 @@ public class Envio {
     @NotBlank(message = "La dirección de destino es obligatoria")
     private String direccionDestino;
 
-    private String estado; // EN_PREPARACION, EN_RUTA, ENTREGADO
+    private String estado; 
     
     private LocalDateTime fechaEnvio;
 
-    // Guarda el ID del cliente que compró
+    
     @Column(nullable = false)
     private Long idUsuario; 
 
-    // Relación: Un envío pertenece a un proveedor
+    
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_proveedor", nullable = false)
     private Proveedor proveedor;

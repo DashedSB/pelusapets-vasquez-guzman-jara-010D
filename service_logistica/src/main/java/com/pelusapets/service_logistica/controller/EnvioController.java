@@ -25,4 +25,16 @@ public class EnvioController {
     public ResponseEntity<Envio> registrar(@Valid @RequestBody Envio envio) {
         return new ResponseEntity<>(envioService.guardar(envio), HttpStatus.CREATED);
     }
+    
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Envio> buscarPorId(@PathVariable Long id) {
+        // Usamos el nuevo método que creamos en el Service
+        Envio envio = envioService.obtenerEnvioConUsuario(id);
+        
+        if (envio != null) {
+            return new ResponseEntity<>(envio, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
 }
