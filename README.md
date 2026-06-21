@@ -21,6 +21,7 @@ Desarrollado como proyecto de nivel empresarial para la carrera de **Analista Pr
 * **Maven** (Gestión de dependencias)
 * **Postman** (Pruebas de API REST e integración)
 * **XAMPP** (Servidor local y administración MySQL mediante phpMyAdmin)
+* **Springdoc OpenAPI**(Swagger) (Documentación interactiva de la API)
 
 ---
 
