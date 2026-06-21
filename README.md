@@ -13,6 +13,7 @@ Desarrollado como proyecto de nivel empresarial para la carrera de Analista Prog
 
 ## Tecnologías y Herramientas
 
+<<<<<<< HEAD
 * Java 21 & Spring Boot 3.x
 * Spring Data JPA / Hibernate (Mapeo objeto-relacional)
 * MySQL (Motor de Base de Datos Relacional)
@@ -20,6 +21,17 @@ Desarrollado como proyecto de nivel empresarial para la carrera de Analista Prog
 * Jakarta Validation (Validación estricta de integridad de datos)
 * Maven (Gestión de dependencias)
 * Postman (Pruebas de API REST e integración)
+=======
+* **Java 21** & **Spring Boot 3.x**
+* **Spring Data JPA / Hibernate** (Mapeo objeto-relacional)
+* **MySQL** (Motor de Base de Datos Relacional)
+* **Lombok** (Reducción de código boilerplate)
+* **Jakarta Validation** (Validación estricta de integridad de datos)
+* **Maven** (Gestión de dependencias)
+* **Postman** (Pruebas de API REST e integración)
+* **XAMPP** (Servidor local y administración MySQL mediante phpMyAdmin)
+* **Springdoc OpenAPI**(Swagger) (Documentación interactiva de la API)
+>>>>>>> 457626e558e33cb1732b783e1a6f18e24742f522
 
 ---
 
@@ -41,11 +53,15 @@ El ecosistema PelusaPets divide su responsabilidad en dominios de negocio, imple
 
 4. **Gestión de Inventario (Catálogo):**
    * `Producto` & `Categoria`: Relación bidireccional optimizada para rendimiento. La categoría utiliza `FetchType.LAZY` para evitar sobrecarga de memoria al listar, mientras que el producto usa `FetchType.EAGER` para inyectar su familia inmediatamente.
+<<<<<<< HEAD
    * *Prevención de Recursividad:* Implementación estratégica de `@JsonIgnore` y `@JsonIgnoreProperties` para evitar bucles infinitos (StackOverflowError) durante la serialización JSON.
+=======
+   * *Prevención de Recursividad:* Implementación estratégica de `@JsonIgnore` y `@JsonIgnoreProperties` para evitar bucles infinitos durante la serialización JSON.
+>>>>>>> 457626e558e33cb1732b783e1a6f18e24742f522
 
 5. **Gestión de Usuarios e Identidad:**
    * `Usuario` & `Rol`: Módulo blindado con una doble barrera de seguridad. Utiliza validaciones en memoria (`@Email`, `@Size`) y restricciones de base de datos (`unique = true`) para evitar cuentas duplicadas.
-   * *Patrón DTO (Data Transfer Object):* Implementación de la clase `UsuarioDTO` para aislar y proteger información sensible (como el `password`), asegurando que la API solo exponga los datos estrictamente necesarios al cliente.
+   * *Patrón DTO:* Implementación de la clase `UsuarioDTO` para aislar y proteger información sensible (como el `password`), asegurando que la API solo exponga los datos estrictamente necesarios al cliente.
 
 6. **Gestión de Promociones:**
    * `Promocion`: Control centralizado de descuentos y cupones de la tienda. Los objetos se reciben mediante `@RequestBody` en la capa del controlador para su procesamiento y validación antes de persistir las reglas de descuento aplicadas al catálogo.
@@ -192,6 +208,6 @@ El ecosistema PelusaPets divide su responsabilidad en dominios de negocio, imple
 
 1. **Validación Robusta:** Uso extensivo de validaciones de Jakarta para asegurar que a la base de datos no ingrese información corrupta o matemáticamente ilógica.
 2. **Manejo de Errores Defensivo:** Prevención de `NullPointerException` mediante `Optional<T>`, uso de bloques `try-catch` y respuestas HTTP precisas (200, 201, 204, 404).
-3. **Separación de Responsabilidades (KISS & SOLID):** División estricta entre la capa de acceso a datos (`Repository`), la lógica matemática y de negocio (`Service`), y la exposición de la API (`Controller`).
+3. **Separación de Responsabilidades:** División estricta entre la capa de acceso a datos (`Repository`), la lógica matemática y de negocio (`Service`), y la exposición de la API (`Controller`).
 4. **CORS Configurado:** Implementación de `@CrossOrigin` en módulos clave (Inventario y Pagos) para asegurar la comunicación fluida con la capa de presentación (Frontend).
 5. **Seguridad y Serialización:** Uso de Data Transfer Objects (DTOs) y anotaciones de ignorancia JSON (`@JsonIgnore`) para proteger credenciales y evitar bucles de memoria infinitos.
