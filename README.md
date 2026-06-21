@@ -20,6 +20,7 @@ Desarrollado como proyecto de nivel empresarial para la carrera de **Analista Pr
 * **Jakarta Validation** (Validación estricta de integridad de datos)
 * **Maven** (Gestión de dependencias)
 * **Postman** (Pruebas de API REST e integración)
+* **XAMPP** (Servidor local y administración MySQL mediante phpMyAdmin)
 
 ---
 
