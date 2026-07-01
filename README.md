@@ -14,14 +14,7 @@ Desarrollado como proyecto de nivel empresarial para la carrera de Analista Prog
 ## Tecnologías y Herramientas
 
 
-* Java 21 & Spring Boot 3.x
-* Spring Data JPA / Hibernate (Mapeo objeto-relacional)
-* MySQL (Motor de Base de Datos Relacional)
-* Lombok (Reducción de código boilerplate)
-* Jakarta Validation (Validación estricta de integridad de datos)
-* Maven (Gestión de dependencias)
-* Postman (Pruebas de API REST e integración)
-* **Java 21** & **Spring Boot 3.x**
+* **Java** 21 & Spring Boot 3.x
 * **Spring Data JPA / Hibernate** (Mapeo objeto-relacional)
 * **MySQL** (Motor de Base de Datos Relacional)
 * **Lombok** (Reducción de código boilerplate)
