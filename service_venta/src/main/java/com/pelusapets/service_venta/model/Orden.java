@@ -36,7 +36,7 @@ public class Orden {
   @NotNull(message = "El ID del usuario no puede estar vacio")
   private Long usuarioId;
 
-  @NotNull(message = "El total no puede estar vacio")
+ 
   @PositiveOrZero(message = "El total no puede ser negativo")
   private Double total;
 

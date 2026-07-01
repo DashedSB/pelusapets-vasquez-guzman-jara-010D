@@ -27,6 +27,11 @@ public class DevolucionesService {
     if (devolucion.getNumeroDevolucion() == null || devolucion.getNumeroDevolucion().isEmpty()){
         devolucion.setNumeroDevolucion("DEV-" + System.currentTimeMillis());
     }
+
+    devolucion.setFechaDevolucion(java.time.LocalDate.now());
+
+    devolucion.setEstado("PENDIENTE");
+    
     return devolucionesRepository.save(devolucion);
   }
 

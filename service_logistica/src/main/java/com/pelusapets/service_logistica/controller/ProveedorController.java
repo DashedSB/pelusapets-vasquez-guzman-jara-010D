@@ -2,7 +2,7 @@ package com.pelusapets.service_logistica.controller;
 
 import java.util.List;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,8 +13,11 @@ import com.pelusapets.service_logistica.services.ProveedorService;
 @RequestMapping("/api/proveedores")
 public class ProveedorController {
 
-    @Autowired
-    private ProveedorService proveedorService;
+    private final ProveedorService proveedorService;
+
+    ProveedorController(ProveedorService proveedorService) {
+        this.proveedorService = proveedorService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Proveedor>> listarTodos() {

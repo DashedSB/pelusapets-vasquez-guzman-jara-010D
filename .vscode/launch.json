@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ServicePostventaApplication<service_postventa>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pelusapet.service_postventa.ServicePostventaApplication",
+            "projectName": "service_postventa",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

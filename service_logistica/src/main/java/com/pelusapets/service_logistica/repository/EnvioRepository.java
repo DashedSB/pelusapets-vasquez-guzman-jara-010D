@@ -5,11 +5,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
-
 import com.pelusapets.service_logistica.model.Envio;
 
-@Repository
 public interface EnvioRepository extends JpaRepository<Envio, Long> {
 
     
@@ -28,7 +25,7 @@ public interface EnvioRepository extends JpaRepository<Envio, Long> {
     @Query("""
         SELECT e FROM Envio e
         JOIN FETCH e.proveedor p
-        WHERE p.nombre = :nombreProveedor
+        WHERE p.nombreEmpresa = :nombreProveedor
         """)
     List<Envio> findEnvioPorNombreProveedor(@Param("nombreProveedor") String nombreProveedor);
 }

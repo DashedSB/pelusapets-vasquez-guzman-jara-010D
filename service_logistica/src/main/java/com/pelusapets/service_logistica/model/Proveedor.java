@@ -21,4 +21,12 @@ public class Proveedor {
 
     @NotBlank(message = "Especifique la categoría (Ej: Alimentos, Accesorios)")
     private String categoria;
-    }
+
+    // --- CAMPOS NUEVOS AGREGADOS PARA QUE NO FALLE EL REPOSITORIO ---
+    
+    @NotBlank(message = "El correo de contacto es obligatorio")
+    private String correo;
+
+    @Column(columnDefinition = "boolean default true")
+    private boolean activo = true; // Por defecto el proveedor estará activo
+}

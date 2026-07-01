@@ -13,16 +13,8 @@ Desarrollado como proyecto de nivel empresarial para la carrera de Analista Prog
 
 ## Tecnologías y Herramientas
 
-<<<<<<< HEAD
-* Java 21 & Spring Boot 3.x
-* Spring Data JPA / Hibernate (Mapeo objeto-relacional)
-* MySQL (Motor de Base de Datos Relacional)
-* Lombok (Reducción de código boilerplate)
-* Jakarta Validation (Validación estricta de integridad de datos)
-* Maven (Gestión de dependencias)
-* Postman (Pruebas de API REST e integración)
-=======
-* **Java 21** & **Spring Boot 3.x**
+
+* **Java** 21 & Spring Boot 3.x
 * **Spring Data JPA / Hibernate** (Mapeo objeto-relacional)
 * **MySQL** (Motor de Base de Datos Relacional)
 * **Lombok** (Reducción de código boilerplate)
@@ -31,7 +23,7 @@ Desarrollado como proyecto de nivel empresarial para la carrera de Analista Prog
 * **Postman** (Pruebas de API REST e integración)
 * **XAMPP** (Servidor local y administración MySQL mediante phpMyAdmin)
 * **Springdoc OpenAPI**(Swagger) (Documentación interactiva de la API)
->>>>>>> 457626e558e33cb1732b783e1a6f18e24742f522
+
 
 ---
 
@@ -53,11 +45,11 @@ El ecosistema PelusaPets divide su responsabilidad en dominios de negocio, imple
 
 4. **Gestión de Inventario (Catálogo):**
    * `Producto` & `Categoria`: Relación bidireccional optimizada para rendimiento. La categoría utiliza `FetchType.LAZY` para evitar sobrecarga de memoria al listar, mientras que el producto usa `FetchType.EAGER` para inyectar su familia inmediatamente.
-<<<<<<< HEAD
+
    * *Prevención de Recursividad:* Implementación estratégica de `@JsonIgnore` y `@JsonIgnoreProperties` para evitar bucles infinitos (StackOverflowError) durante la serialización JSON.
-=======
+
    * *Prevención de Recursividad:* Implementación estratégica de `@JsonIgnore` y `@JsonIgnoreProperties` para evitar bucles infinitos durante la serialización JSON.
->>>>>>> 457626e558e33cb1732b783e1a6f18e24742f522
+
 
 5. **Gestión de Usuarios e Identidad:**
    * `Usuario` & `Rol`: Módulo blindado con una doble barrera de seguridad. Utiliza validaciones en memoria (`@Email`, `@Size`) y restricciones de base de datos (`unique = true`) para evitar cuentas duplicadas.
